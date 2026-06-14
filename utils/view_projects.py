@@ -8,4 +8,4 @@ def view_projects(args):
             except:
                 projects = []
      for project in projects:  
-        print(f"{project[0]},{project[1]},{project[2]}")
+        print(f"title: {project["title"]}, description: {project["description"]}, due_date: {project["due_date"]}, tasks: {project["tasks"]}, collaborators: {project["collaborators"]}")

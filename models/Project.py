@@ -1,10 +1,10 @@
 class Project:
     def __init__(self,title,description,due_date):
         self.title = title
-        self.desctription = description
+        self.description = description
         self.due_date = due_date
-        self.user = None
-        self.tasks = []
+        self.collaborators = [] #This contains the list of users collaborating in the project
+        self.tasks = [] #This contains the list of tasks to be done in the project
     
     def assign_project(self,user):
         pass
