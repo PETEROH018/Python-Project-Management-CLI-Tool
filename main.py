@@ -1,5 +1,5 @@
 import argparse
-from utils import add_user,view_users,add_project,view_projects,add_task
+from utils import add_user,view_users,add_project,view_projects,add_task,assign_project
 
 def main():
     parser = argparse.ArgumentParser(description=" Python Project Management CLI Tool ")
@@ -31,6 +31,13 @@ def main():
     add_tasks_parser.add_argument("--title",help="type the task's title")
     add_tasks_parser.add_argument("--project",help="type the project that contains that task")
     add_tasks_parser.set_defaults(func=add_task)
+
+    '''Assign a project and tasks to a user using the assign-project command'''
+    add_project_parser = subparsers.add_parser("assign-project",help="Add a project and tasks to a user")
+    add_project_parser.add_argument("--name",help="type the user's name")
+    add_project_parser.add_argument("--project",help="type the project's title")
+    add_project_parser.add_argument("--tasks",nargs='+',help="type the tasks to assign to the user and separate them with spaces")
+    add_project_parser.set_defaults(func=assign_project)
 
 
     args = parser.parse_args()

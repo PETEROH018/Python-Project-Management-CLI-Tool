@@ -17,13 +17,17 @@
             {
                 "title": "task3",
                 "status": "assigned",
-                "assignee": "Peter"
+                "assignee": "John"
             }
         ],
         "collaborators": [
             {
                 "name": "Peter",
                 "email": "peter@gmail.com"
+            },
+            {
+                "name": "John",
+                "email": "john@gmail.com"
             }
         ]
     },
@@ -34,8 +38,8 @@
         "tasks": [
             {
                 "title": "Design the landing page",
-                "status": "assigned",
-                "assignee": "John"
+                "status": "available",
+                "assignee": null
             }
         ],
         "collaborators": [
@@ -60,13 +64,6 @@
                 "assignee": null
             }
         ],
-        "collaborators": []
-    },
-    {
-        "title": "Project4",
-        "description": "Making a PCB schematic",
-        "due_date": "20-06-2026",
-        "tasks": [],
         "collaborators": []
     }
 ]
