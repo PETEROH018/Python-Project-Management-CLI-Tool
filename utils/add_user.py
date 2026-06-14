@@ -12,12 +12,12 @@ def add_user(args):
         except:
             users = []
     for entry in users:
-        if entry[0] == user.name:
+        if entry["name"] == user.name:
             print("The user exists!")
             break
     else:
-        users.append((user.name,user.email))
+        users.append({"name":user.name,"email":user.email,"projects":user.projects})
         with open("data/Users.json","w") as file:
-            json.dump(users,file)
+            json.dump(users,file,indent=4)
 
 

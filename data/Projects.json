@@ -6,11 +6,30 @@
         "tasks": [
             {
                 "title": "Source materials",
-                "status": "pending",
-                "assignee": null
+                "status": "assigned",
+                "assignee": "Peter"
+            },
+            {
+                "title": "task2",
+                "status": "assigned",
+                "assignee": "Peter"
+            },
+            {
+                "title": "task3",
+                "status": "assigned",
+                "assignee": "John"
             }
         ],
-        "collaborators": []
+        "collaborators": [
+            {
+                "name": "Peter",
+                "email": "peter@gmail.com"
+            },
+            {
+                "name": "John",
+                "email": "john@gmail.com"
+            }
+        ]
     },
     {
         "title": "Project2",
@@ -19,7 +38,7 @@
         "tasks": [
             {
                 "title": "Design the landing page",
-                "status": "pending",
+                "status": "available",
                 "assignee": null
             }
         ],
@@ -29,7 +48,13 @@
         "title": "Project3",
         "description": "Building a motion detector",
         "due_date": "20-07-2026",
-        "tasks": [],
+        "tasks": [
+            {
+                "title": "Come up with a PCB schematic",
+                "status": "available",
+                "assignee": null
+            }
+        ],
         "collaborators": []
     }
 ]

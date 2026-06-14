@@ -6,5 +6,3 @@ class Project:
         self.collaborators = [] #This contains the list of users collaborating in the project
         self.tasks = [] #This contains the list of tasks to be done in the project
     
-    def assign_project(self,user):
-        pass
