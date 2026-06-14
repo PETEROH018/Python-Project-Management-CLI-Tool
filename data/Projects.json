@@ -1,1 +1,30 @@
-[["Project1", "Buiding a robotic arm", "20-06-2026"], ["Project2", "Creating a website", "30-06-2026"], ["Project3", "Building a motion detector", "20-07-2026"]]
+[
+    {
+        "title": "Project1",
+        "description": "Buiding a robotic arm",
+        "due_date": "20-06-2026",
+        "tasks": [],
+        "collaborators": []
+    },
+    {
+        "title": "Project2",
+        "description": "Creating a website",
+        "due_date": "30-06-2026",
+        "tasks": [],
+        "collaborators": []
+    },
+    {
+        "title": "Project3",
+        "description": "Building a motion detector",
+        "due_date": "20-07-2026",
+        "tasks": [],
+        "collaborators": []
+    },
+    {
+        "title": "Project4",
+        "description": "Designing a task manager",
+        "due_date": "20-06-2026",
+        "tasks": [],
+        "collaborators": []
+    }
+]

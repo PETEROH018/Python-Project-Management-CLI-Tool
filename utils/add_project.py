@@ -9,10 +9,10 @@ def add_project(args):
         except:
             projects = []
     for entry in projects:
-        if entry[0] == project.title:
+        if entry["title"] == project.title:
             print("The project exists!")
             break
     else:
-        projects.append((project.title,project.desctription,project.due_date))
+        projects.append({"title":project.title,"description":project.description,"due_date":project.due_date,"tasks":project.tasks,"collaborators":project.collaborators})
         with open("data/Projects.json","w") as file:
-            json.dump(projects,file)
+            json.dump(projects,file,indent=4)
