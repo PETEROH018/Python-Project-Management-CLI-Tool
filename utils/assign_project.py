@@ -1,7 +1,7 @@
 import json
-# from models.Task import Task
-# from models.Project import Project
-# from models.User import User
+import sys
+from colorama import Fore, Style, init
+init(autoreset=True)
 
 def assign_project(args):
     users = []
@@ -18,7 +18,7 @@ def assign_project(args):
         except:
             projects = []
     project = next((project for project in projects if project.get("title") == args.project), None) #A project dictionary is created with details of the project that has the title specified in the command argument
-
+    assigned_tasks = [] #This holds the tasks that have been confirmed to exist in memory and have been assigned to a user
     if user != None: 
 #If the user exists, the next step is to check whether the project in the command argument exists
         if project != None: 
@@ -32,15 +32,15 @@ def assign_project(args):
                         tasks_to_be_assigned.append(task) #The task is appended to the tasks_to_be_assigned list for further processing
                         break
                 else:
-                    print(f"The task, {entry}, does not exist in {project["title"]} tasks list!") # If there is no match, then the task does not exist
+                    print(f"{Fore.RED}The task, {entry}, does not exist in {project["title"]} tasks list!") # If there is no match, then the task does not exist
+                    
 
             '''This part handles checking the availability of a task for assignment to a collaborator'''
-            assigned_tasks = [] #This holds the tasks that have been confirmed to exist in memory and have been assigned to a user
             for task_entry in tasks_to_be_assigned: #Looping through the tasks that have been confirmed to exist in memory
                 if task_entry["status"] == "available": #If the status is available, then the task is added to the assigned tasks list
                     assigned_tasks.append(task_entry) 
                 else:
-                    print(f"The task, {task_entry["title"]}, is already assigned to {task_entry["assignee"]}")
+                    print(f"{Fore.RED}The task, {task_entry["title"]}, is already assigned to {task_entry["assignee"]}")
 
             '''This part handles looping through the users stored in Users.json and finding the user specified in the command argument '''
             for user_entry in users: #Looping through the entire list of users stored in the Users.json file
@@ -70,11 +70,25 @@ def assign_project(args):
                                 project_task["assignee"] = user["name"]
 
         else:
-            print("The selected project does not exist!")
+            print(f"{Fore.RED}The selected project does not exist!")
+            sys.exit(1)
             
     else:
-        print("The selected user does not exist!")
-    with open("data/Users.json","w") as file:
+        print(f"{Fore.RED}The selected user does not exist!")
+        sys.exit(1)
+    try:
+        with open("data/Users.json","w") as file:
             json.dump(users,file,indent=4)
-    with open("data/Projects.json","w") as file:
+        with open("data/Projects.json","w") as file:
             json.dump(projects,file,indent=4)
+        
+        tsk_count = 1
+        if len(assigned_tasks) == 0:
+            pass
+        else: 
+            print(f"{Fore.GREEN}{args.name} has been assigned the following tasks in {args.project} project ")
+            for tsk in assigned_tasks:
+                print(f"{tsk_count}. {tsk["title"]}")
+                tsk_count += 1
+    except Exception:
+        print(f"{Fore.RED}An error occured when trying to assign {args.name} the tasks in {args.project} project")
