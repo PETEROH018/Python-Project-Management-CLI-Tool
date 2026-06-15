@@ -3,28 +3,63 @@
         "title": "Project1",
         "description": "Buiding a robotic arm",
         "due_date": "20-06-2026",
-        "tasks": [],
-        "collaborators": []
+        "tasks": [
+            {
+                "title": "Source materials",
+                "status": "assigned",
+                "assignee": "Peter"
+            },
+            {
+                "title": "task2",
+                "status": "assigned",
+                "assignee": "Peter"
+            },
+            {
+                "title": "task3",
+                "status": "assigned",
+                "assignee": "Peter"
+            }
+        ],
+        "collaborators": [
+            {
+                "name": "Peter",
+                "email": "peter@gmail.com"
+            }
+        ]
     },
     {
         "title": "Project2",
         "description": "Creating a website",
         "due_date": "30-06-2026",
-        "tasks": [],
-        "collaborators": []
+        "tasks": [
+            {
+                "title": "Design the landing page",
+                "status": "assigned",
+                "assignee": "John"
+            }
+        ],
+        "collaborators": [
+            {
+                "name": "John",
+                "email": "john@gmail.com"
+            },
+            {
+                "name": "Peter",
+                "email": "peter@gmail.com"
+            }
+        ]
     },
     {
         "title": "Project3",
         "description": "Building a motion detector",
         "due_date": "20-07-2026",
-        "tasks": [],
-        "collaborators": []
-    },
-    {
-        "title": "Project4",
-        "description": "Designing a task manager",
-        "due_date": "20-06-2026",
-        "tasks": [],
+        "tasks": [
+            {
+                "title": "Come up with a PCB schematic",
+                "status": "available",
+                "assignee": null
+            }
+        ],
         "collaborators": []
     }
 ]

@@ -8,4 +8,4 @@ def view_users(args):
             except:
                 users = []
      for user in users:  
-        print(f"{user[0]},{user[1]}")
+        print(f"name: {user["name"]}, email: {user["email"]}, projects: {user["projects"]}")
