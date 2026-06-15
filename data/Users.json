@@ -17,8 +17,19 @@
                         "title": "task2",
                         "status": "assigned",
                         "assignee": "Peter"
+                    },
+                    {
+                        "title": "task3",
+                        "status": "assigned",
+                        "assignee": "Peter"
                     }
                 ]
+            },
+            {
+                "title": "Project2",
+                "description": "Creating a website",
+                "due_date": "30-06-2026",
+                "tasks": []
             }
         ]
     },
@@ -27,12 +38,12 @@
         "email": "john@gmail.com",
         "projects": [
             {
-                "title": "Project1",
-                "description": "Buiding a robotic arm",
-                "due_date": "20-06-2026",
+                "title": "Project2",
+                "description": "Creating a website",
+                "due_date": "30-06-2026",
                 "tasks": [
                     {
-                        "title": "task3",
+                        "title": "Design the landing page",
                         "status": "assigned",
                         "assignee": "John"
                     }
