@@ -22,7 +22,7 @@ def main():
     add_project_parser.add_argument("--due_date",help="type the project's due_date")
     add_project_parser.set_defaults(func=add_project)
 
-    '''Viewing the list of registred users'''
+    '''Viewing the list of projects'''
     view_projects_parser = subparsers.add_parser("view-projects",help="View all projects")
     view_projects_parser.set_defaults(func=view_projects)
 
