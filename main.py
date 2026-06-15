@@ -1,5 +1,5 @@
 import argparse
-from utils import add_user,view_users,add_project
+from utils import add_user,view_users
 
 def main():
     parser = argparse.ArgumentParser(description=" Python Project Management CLI Tool ")
@@ -14,13 +14,6 @@ def main():
     '''Viewing the list of registred users'''
     view_users_parser = subparsers.add_parser("view-users",help="View all registred users")
     view_users_parser.set_defaults(func=view_users)
-
-    '''Adding a new project'''
-    add_project_parser = subparsers.add_parser("add-project",help="Add a new project")
-    add_project_parser.add_argument("--title",help="type the project's title")
-    add_project_parser.add_argument("--description",help="type the project's description")
-    add_project_parser.add_argument("--due_date",help="type the project's due_date")
-    add_project_parser.set_defaults(func=add_project)
 
     args = parser.parse_args()
     if hasattr(args,"func"):
