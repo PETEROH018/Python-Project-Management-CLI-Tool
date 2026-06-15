@@ -55,5 +55,10 @@
         "name": "Ann",
         "email": "ann@gmail.com",
         "projects": []
+    },
+    {
+        "name": "Grace",
+        "email": "grace@gmail.com",
+        "projects": []
     }
 ]
