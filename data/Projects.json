@@ -12,7 +12,7 @@
             {
                 "title": "task2",
                 "status": "assigned",
-                "assignee": "Peter"
+                "assignee": "John"
             },
             {
                 "title": "task3",
@@ -24,6 +24,10 @@
             {
                 "name": "Peter",
                 "email": "peter@gmail.com"
+            },
+            {
+                "name": "John",
+                "email": "john@gmail.com"
             }
         ]
     },
@@ -42,10 +46,6 @@
             {
                 "name": "John",
                 "email": "john@gmail.com"
-            },
-            {
-                "name": "Peter",
-                "email": "peter@gmail.com"
             }
         ]
     },
