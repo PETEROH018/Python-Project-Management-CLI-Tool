@@ -21,6 +21,11 @@
                 "title": "Design the landing page",
                 "status": "pending",
                 "assignee": null
+            },
+            {
+                "title": "task2",
+                "status": "available",
+                "assignee": null
             }
         ],
         "collaborators": []
