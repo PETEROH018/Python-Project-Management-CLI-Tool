@@ -17,17 +17,13 @@
             {
                 "title": "task3",
                 "status": "assigned",
-                "assignee": "John"
+                "assignee": "Peter"
             }
         ],
         "collaborators": [
             {
                 "name": "Peter",
                 "email": "peter@gmail.com"
-            },
-            {
-                "name": "John",
-                "email": "john@gmail.com"
             }
         ]
     },
@@ -38,8 +34,8 @@
         "tasks": [
             {
                 "title": "Design the landing page",
-                "status": "available",
-                "assignee": null
+                "status": "assigned",
+                "assignee": "John"
             }
         ],
         "collaborators": [
