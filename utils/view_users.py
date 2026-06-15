@@ -15,7 +15,7 @@ def view_users(args):
         print(Fore.YELLOW + "projects")
         project_count = 1
         for project in user["projects"]:
-            print(f"    {project_count}.{Fore.GREEN} {project["title"]} {Style.RESET_ALL}, description: {project["description"]}, due_date {project["due_date"]}")
+            print(f"    {project_count}.{Fore.GREEN} {project["title"]} {Style.RESET_ALL} -> description: {project["description"]}, due_date {project["due_date"]}")
             project_count += 1
             print(Fore.YELLOW + "       tasks")
             task_count = 1
