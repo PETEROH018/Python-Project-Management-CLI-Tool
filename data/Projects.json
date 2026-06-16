@@ -85,6 +85,11 @@
                 "title": "Designing the rectifier",
                 "status": "assigned",
                 "assignee": "Grace"
+            },
+            {
+                "title": "task1",
+                "status": "available",
+                "assignee": null
             }
         ],
         "collaborators": [
@@ -93,5 +98,12 @@
                 "email": "grace@gmail.com"
             }
         ]
+    },
+    {
+        "title": "Project5",
+        "description": "new project",
+        "due_date": "29-12-2026",
+        "tasks": [],
+        "collaborators": []
     }
 ]
