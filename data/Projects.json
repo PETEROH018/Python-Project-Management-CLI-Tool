@@ -56,10 +56,42 @@
         "tasks": [
             {
                 "title": "Come up with a PCB schematic",
-                "status": "available",
-                "assignee": null
+                "status": "assigned",
+                "assignee": "Grace"
+            },
+            {
+                "title": "task2",
+                "status": "assigned",
+                "assignee": "Ann"
             }
         ],
-        "collaborators": []
+        "collaborators": [
+            {
+                "name": "Ann",
+                "email": "ann@gmail.com"
+            },
+            {
+                "name": "Grace",
+                "email": "grace@gmail.com"
+            }
+        ]
+    },
+    {
+        "title": "Project4",
+        "description": "Creating a power supply",
+        "due_date": "02-07-2026",
+        "tasks": [
+            {
+                "title": "Designing the rectifier",
+                "status": "assigned",
+                "assignee": "Grace"
+            }
+        ],
+        "collaborators": [
+            {
+                "name": "Grace",
+                "email": "grace@gmail.com"
+            }
+        ]
     }
 ]

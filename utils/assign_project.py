@@ -51,7 +51,10 @@ def assign_project(args):
                             user_project["tasks"].extend(assigned_tasks) #Instead, the tasks list for that project is extended to include the new tasks
                             break
                     else:
-                        user_entry["projects"].append({"title":project["title"],"description":project["description"],"due_date":project["due_date"],"tasks":assigned_tasks})
+                        if len(assigned_tasks) == 0:
+                            break
+                        else:
+                            user_entry["projects"].append({"title":project["title"],"description":project["description"],"due_date":project["due_date"],"tasks":assigned_tasks})
 
             '''This part handles looping through the projects stored in Projects.json and finding the project specified in the command argument for modification'''
             for project_entry in projects: #Looping through the entire list of projects stored in the Projects.json file 
@@ -61,7 +64,10 @@ def assign_project(args):
                         if collaborator["name"] == args.name: #If the collaborator already exists, there is no need to re-add them
                             break
                     else:
-                        project_entry["collaborators"].append({"name":user["name"],"email":user["email"]})
+                        if len(assigned_tasks) == 0:
+                            break
+                        else:
+                            project_entry["collaborators"].append({"name":user["name"],"email":user["email"]})
                     '''This part handles changing the status of an assigned task to 'assigned' and updating the assignee to the user specified in the command argument '''
                     for project_task in project_entry["tasks"]: #Looping through the list of tasks in the project specified in the argument
                         for assigned_task in assigned_tasks: #Inner loop comparing the tasks saved in the Project.JSON file to the tasks assigned to the user
@@ -86,7 +92,7 @@ def assign_project(args):
         if len(assigned_tasks) == 0:
             pass
         else: 
-            print(f"{Fore.GREEN}{args.name} has been assigned the following tasks in {args.project} project ")
+            print(f"{Fore.GREEN}{args.name} has been assigned the following tasks in {args.project} project: ")
             for tsk in assigned_tasks:
                 print(f"{tsk_count}. {tsk["title"]}")
                 tsk_count += 1

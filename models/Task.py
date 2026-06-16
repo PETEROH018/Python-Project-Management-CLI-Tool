@@ -15,8 +15,8 @@ class Task:
     
     @title.setter
     def title(self,value):
-        if re.match(r"^[a-zA-Z0-9_]+$",value):
+        if re.match(r"^[a-zA-Z0-9_ ]+$",value):
             self._title = value
         else:
-             print(f"{Fore.RED}The task title should only contain numbers, letters and underscores!")
+             print(f"{Fore.RED}The task title should only contain numbers, letters, underscores and spaces!")
              sys.exit(1)

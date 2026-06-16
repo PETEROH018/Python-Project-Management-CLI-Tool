@@ -55,11 +55,49 @@
     {
         "name": "Ann",
         "email": "ann@gmail.com",
-        "projects": []
+        "projects": [
+            {
+                "title": "Project3",
+                "description": "Building a motion detector",
+                "due_date": "20-07-2026",
+                "tasks": [
+                    {
+                        "title": "task2",
+                        "status": "assigned",
+                        "assignee": "Ann"
+                    }
+                ]
+            }
+        ]
     },
     {
         "name": "Grace",
         "email": "grace@gmail.com",
-        "projects": []
+        "projects": [
+            {
+                "title": "Project3",
+                "description": "Building a motion detector",
+                "due_date": "20-07-2026",
+                "tasks": [
+                    {
+                        "title": "Come up with a PCB schematic",
+                        "status": "assigned",
+                        "assignee": "Grace"
+                    }
+                ]
+            },
+            {
+                "title": "Project4",
+                "description": "Creating a power supply",
+                "due_date": "02-07-2026",
+                "tasks": [
+                    {
+                        "title": "Designing the rectifier",
+                        "status": "assigned",
+                        "assignee": "Grace"
+                    }
+                ]
+            }
+        ]
     }
 ]

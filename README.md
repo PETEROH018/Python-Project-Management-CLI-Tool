@@ -34,3 +34,7 @@
     - If a task in the tasks list does not match an existing task in the project, an error is also thrown indicating "The task, task_title, does not exist in project_title tasks list!"
     - If task exists but has already been assigned to another user, an error is thrown showing "The task, task_title, is already assigned to assignee"
     - When all the checks are complete and the arguments in the command are consistent with the data stored in the json files, the project is added to the user's project list, the user is added as a collaborator in the project and the tasks are assigned to the user.
+    - On successful assignment of the task(s) in a project to user, a success message is displayed indicating "user1 has been assigned the following tasks in project1 project:  task1
+          task2
+          task3 "
+    - If the changes could not be written to the Users.json file or Projects.json file or both, an error is displayed indicating "An error occured when trying to assign user1 the tasks in project1 project"
