@@ -4,6 +4,10 @@ from colorama import Fore, Style, init
 init(autoreset=True)
 
 def assign_project(args):
+    '''This part handles checking whether all arguments are provided in the command'''
+    if args.name == None or args.project == None or args.tasks == None:
+        print(f"{Fore.RED} assign-project must have all arguments!{Style.RESET_ALL} Type{Fore.YELLOW} python3 main.py assign-project --help{Style.RESET_ALL} to see which arguments to use ")
+        sys.exit(1)
     users = []
     with open("data/Users.json","r") as file: #Getting user data that is saved in the Users.json file
         try:
@@ -51,7 +55,7 @@ def assign_project(args):
                             user_project["tasks"].extend(assigned_tasks) #Instead, the tasks list for that project is extended to include the new tasks
                             break
                     else:
-                        if len(assigned_tasks) == 0:
+                        if len(assigned_tasks) == 0: #This prevents a project from being added to a user's project list if that user has no tasks in that project yet
                             break
                         else:
                             user_entry["projects"].append({"title":project["title"],"description":project["description"],"due_date":project["due_date"],"tasks":assigned_tasks})
@@ -64,7 +68,7 @@ def assign_project(args):
                         if collaborator["name"] == args.name: #If the collaborator already exists, there is no need to re-add them
                             break
                     else:
-                        if len(assigned_tasks) == 0:
+                        if len(assigned_tasks) == 0: #This prevents a user from being added to the collaborators list of a project if the user has no tasks in that project yet
                             break
                         else:
                             project_entry["collaborators"].append({"name":user["name"],"email":user["email"]})
@@ -82,6 +86,7 @@ def assign_project(args):
     else:
         print(f"{Fore.RED}The selected user does not exist!")
         sys.exit(1)
+    '''This part handles overwriting the old data in Users.json and Projects.json with the updated users list and projects list respectively'''
     try:
         with open("data/Users.json","w") as file:
             json.dump(users,file,indent=4)
