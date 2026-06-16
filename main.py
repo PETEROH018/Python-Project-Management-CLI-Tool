@@ -41,10 +41,10 @@ def main():
 
 
     args = parser.parse_args()
-    if hasattr(args,"func"):
+    if hasattr(args,"func"):  #If no command is supplied, the help menu is displayed
         args.func(args)
     else:
-        parser.print_help
+        parser.print_help()
 
 if __name__ == "__main__":
     main()
