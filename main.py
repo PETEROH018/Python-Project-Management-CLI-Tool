@@ -12,7 +12,7 @@ def main():
     add_user_parser.set_defaults(func=add_user)
 
     '''Viewing the list of registred users using the view-users command'''
-    view_users_parser = subparsers.add_parser("view-users",help="View all registred users")
+    view_users_parser = subparsers.add_parser("view-users",help="View all registered users")
     view_users_parser.set_defaults(func=view_users)
 
     '''Adding a new project using the add-project command'''

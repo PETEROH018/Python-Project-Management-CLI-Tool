@@ -18,7 +18,7 @@ class User:
         if re.match(r"^[a-zA-Z0-9_]+$",value):
             self._name = value
         else:
-             print(f"{Fore.RED}The user name should only contain numbers, letters and underscores!{Style.RESET_ALL}")
+             print(f"{Fore.RED}The user name should only contain numbers, letters and underscores!")
              sys.exit(1)
     
     @property

@@ -18,10 +18,10 @@ class Project:
     
     @title.setter
     def title(self,value):
-        if re.match(r"^[a-zA-Z0-9_]+$",value):
+        if re.match(r"^[a-zA-Z0-9_ ]+$",value):
             self._title = value
         else:
-            print(f"{Fore.RED}The project title should only contain numbers, letters and underscores!{Style.RESET_ALL}")
+            print(f"{Fore.RED}The project title should only contain numbers, letters, spaces and underscores!")
             sys.exit(1)
     
     @property
@@ -31,7 +31,7 @@ class Project:
     @description.setter
     def description(self,value):
         if len(value) > 300:
-            print(f"{Fore.RED}The project description should not exceed 300 characters!{Style.RESET_ALL}")
+            print(f"{Fore.RED}The project description should not exceed 300 characters!")
             sys.exit(1)
         else:
             self._description = value
