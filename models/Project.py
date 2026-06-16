@@ -9,8 +9,8 @@ class Project:
         self.title = title
         self.description = description
         self.due_date = due_date
-        self.collaborators = []
-        self.tasks = []
+        self.collaborators = [] #This contains the list of users collaborating in the project
+        self.tasks = [] #This contains the list of tasks to be done in the project
     
     @property
     def title(self):
