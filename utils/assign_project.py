@@ -20,7 +20,7 @@ def assign_project(args):
         try:
             projects = json.load(file) #If the file is readable, the data is read and loaded into a list
         except:
-            projects = []
+            projects = [] #If the file is unreadable, the list is initialized as an empty list
     project = next((project for project in projects if project.get("title") == args.project), None) #A project dictionary is created with details of the project that has the title specified in the command argument
     assigned_tasks = [] #This holds the tasks that have been confirmed to exist in memory and have been assigned to a user
     if user != None: 
